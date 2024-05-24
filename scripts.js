@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function downloadEbook() {
     var link = document.createElement('a');
-    link.href = 'assets/joseph_scanlon_resume.epub';
+    link.href = 'asset/joseph_scanlon_resume.epub';
     link.download = 'joseph_scanlon_resume.epub'; 
     link.click();
 }
