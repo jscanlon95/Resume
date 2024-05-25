@@ -110,6 +110,11 @@ a:hover {
     margin-bottom: 20px; /* Add margin bottom to space out from description */
 }
 
+
+
+
+
+
 .skills-grid button {
     background-color: #f4f7f9;
     padding: 10px 15px; /* Adjusted padding for larger button */
@@ -259,10 +264,22 @@ padding: 0;
         align-items: center; /* Center items horizontally */
     }
 
-    .skill-description {
-        margin-top: 10px; /* Add margin between buttons and descriptions */
+   .skills-grid button {
+        width: auto; /* Let buttons adjust width based on content */
+        margin-bottom: 10px; /* Add space between buttons */
     }
-    
+
+    /* Adjust skill description styles */
+    .skill-description {
+        display: none; /* Initially hide all descriptions */
+        margin-top: 10px; /* Add space between buttons and descriptions */
+        max-width: 80%; /* Limit the width of descriptions on mobile */
+    }
+
+    /* Show description when button is clicked */
+    .skill-button.clicked + .skill-description {
+        display: block; /* Show description */
+    }
 }
 
 
