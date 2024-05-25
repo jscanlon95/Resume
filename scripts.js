@@ -62,6 +62,38 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+// Get the modal
+var modal = document.getElementById('skill-modal');
+
+// Get the <span> element that closes the modal
+var closeBtn = document.getElementsByClassName('close')[0];
+
+// Function to open the modal with the corresponding skill description
+function openModal(description) {
+  // Populate the modal content with the description
+  document.getElementById('skill-description-content').textContent = description;
+  // Display the modal
+  modal.style.display = 'block';
+}
+
+// Function to close the modal
+function closeModal() {
+  modal.style.display = 'none';
+}
+
+// Close the modal when the user clicks on the close button
+closeBtn.onclick = function() {
+  closeModal();
+}
+
+// Close the modal when the user clicks anywhere outside of it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    closeModal();
+  }
+}
+
+
 /*document.addEventListener("DOMContentLoaded", function() {
     // Simulate a click event on the "Professional Experience" tab after a slight delay
     setTimeout(function() {
