@@ -253,6 +253,16 @@ padding: 0;
         flex-direction: column; /* Stack tabs vertically */
         align-items: center; /* Center tabs horizontally */
     }
+    
+      .skills-grid {
+        flex-direction: column; /* Stack items vertically on mobile */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .skill-description {
+        margin-top: 10px; /* Add margin between buttons and descriptions */
+    }
+    
 }
 
 
