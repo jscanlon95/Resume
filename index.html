@@ -3,22 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joseph Scanlon - Resume</title>
+    <title>Joseph Scanlon's Resume</title>
     <link rel="stylesheet" href="styles.css">
      <script defer src="scripts.js"></script>
 </head>
 <body>
     <header>
         <h1>Joseph Scanlon</h1>
+       
         <div class="contact-info">
             <p>Email: <a href="mailto:jscanlon.nyc@gmail.com">jscanlon.nyc@gmail.com</a></p>
             <p>Mobile: <a href="tel:860-657-6553">860-657-6553</a></p>
             <p><a href="https://www.linkedin.com/in/joseph-scanlon-102237139/">LinkedIn</a></p>
         </div>
     </header>
-
-    <section id="experience">
-        <h2>Professional Experience</h2>
+<nav class="tabs">
+    <h2 class="tab" data-tab-target="#professional-experience">Professional Experience</h2>
+    <h2 class="tab" data-tab-target="#education">Education</h2>
+        <h2 class="tab" data-tab-target="#about"><span class="shrink">About</span></h2>
+    <h2 class="tab" data-tab-target="#skills">Skills & Knowledge</h2>
+    <h2 class="tab" data-tab-target="#freelance-work">Freelance Work</h2>
+</nav>
+    <section id="professional-experience" class="tab-content">
+      
         
         <article>
             <h3>W.W. Norton & Company – New York, New York</h3>
@@ -65,8 +72,8 @@
         </article>
     </section>
 
-    <section id="education">
-        <h2>Education and Skills</h2>
+    <section id="education" class="tab-content">
+      
         
         <article>
             <h3>Fordham University at Lincoln Center – New York, NY</h3>
@@ -89,29 +96,42 @@
             </ul>
         </article>
     </section>
+    
+        <section id="about" class="tab-content">
+      
+        
+        <article>
+           <p class="about">Professional with over 6 years of experience in digital content creation and publishing. Passionate about technology's role in the arts while a focus on accessibility. Adept in coding, project management, and fostering interdisciplinary collaboration.</p>
+        
+    </article>
 
-    <section id="skills">
-        <h2>Skills & Knowledge</h2>
+</section>
+    <section id="skills" class="tab-content">
+  
       <div class="skills-grid">
-                    <span>Adobe Creative Suite</span>
-                    <span>Microsoft Suite</span>
-                    <span>Project Management</span>
-                    <span>GREP</span>
-                    <span>Git</span>
-                    <span>HTML/XHTML/CSS</span>
-                    <span>Javascript</span>
-                    <span>Python</span>
-                    <span>WCAG Accessibility</span>
-                    <span>Database Management</span>
-                    <span>Digital & Film Photography</span>
-                    <span>Audio Recording</span>
-                    <span>Content Management Systems</span>
-                    <span>Digital Asset Management</span>
-                </div>
-    </section>
+        <button class="skill-button" data-description="Proficient in Adobe InDesign, Photoshop, Illustrator, Acrobat, & Bridge">Adobe Creative Suite</button>
+        <button class="skill-button" data-description="Description for Microsoft Suite">Microsoft Suite</button>
+        <button class="skill-button" data-description="Description for Project Management">Project Management</button>
+        <button class="skill-button" data-description="Description for GREP">GREP</button>
+        <button class="skill-button" data-description="Experience using Git for both individual and team projects for tracking changes. The site you're currently viewing is an original creation hosted on GitHub.">Git</button>
+        <button class="skill-button" data-description="Description for HTML/XHTML/CSS">HTML/XHTML/CSS</button>
+        <button class="skill-button" data-description="Description for Javascript">Javascript</button>
+        <button class="skill-button" data-description="Description for Python">Python</button>
+        <button class="skill-button" data-description="Description for WCAG Accessibility">WCAG Accessibility</button>
+        <button class="skill-button" data-description="Description for Database Management">Database Management</button>
+        <button class="skill-button" data-description="Description for Digital & Film Photography">Digital & Film Photography</button>
+        <button class="skill-button" data-description="Description for Audio Recording">Audio Recording</button>
+        <button class="skill-button" data-description="Description for Content Management Systems">Familiar with Wordpress, Sitecore, & Sharepoint</button>
+        <button class="skill-button" data-description="Description for Digital Asset Management">Digital Asset Management</button>
+    </div>
+    <div id="skill-description" class="skill-description"></div>
+</section>
 
-    <section id="freelance">
-        <h2>Freelance Work</h2>
+
+
+
+    <section id="freelance-work" class="tab-content">
+       
         <ul>
             <li>Data entry for website redesign with <a href="https://www.hyperakt.com/">Hyperakt</a></li>
             <li>Production assistant for Amazon Studio’s <a href="https://www.imdb.com/title/tt12637874/"><i>Fallout</i></a></li>

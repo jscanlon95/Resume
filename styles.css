@@ -16,6 +16,29 @@ header, section, footer {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+p.about {
+
+text-align: center;
+font-size: 1.2em;
+margin-left: 10em;
+margin-right: 10em;
+
+
+}
+
+span.shrink {
+
+font-size: 90%;
+
+}
+
+.skill-description {
+
+text-align: center;
+margin-top: 2em;
+
+}
+
 /* Header Styles */
 header {
     text-align: center;
@@ -25,9 +48,10 @@ header {
 
 h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 3em;
     font-weight: normal;
     color: #2a7ae2;
+    
 }
 
 .contact-info p {
@@ -45,7 +69,7 @@ h2 {
     color: #2a7ae2;
 }
 
-/* Job Titles and Dates */
+/* Job Titles */
 h3 {
     margin: 10px 0 5px;
     font-size: 1.2em;
@@ -79,22 +103,56 @@ a:hover {
 
 /* Skills Grid */
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 10px;
+    justify-content: center; /* Center the grid */
+    margin-bottom: 20px; /* Add margin bottom to space out from description */
 }
 
-.skills-grid span {
+.skills-grid button {
     background-color: #f4f7f9;
-    padding: 5px 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    padding: 10px 15px; /* Adjusted padding for larger button */
+    border: 2px solid #ddd; /* Larger border */
+    border-radius: 10px; /* Rounder corners */
     text-align: center;
-    color: #333; /* Dark grey for skill items */
+    color: #333;
+    cursor: pointer;
+    font: inherit; /* Use the same font settings as the surrounding text */
+    outline: none; /* Remove the default button outline */
+    display: flex; /* Use flexbox to center text */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    width: 200px; /* Set a fixed width */
+    height: 50px; /* Set a fixed height */
+    margin: 0; /* Reset margin */
+    appearance: none; /* Remove default styling */
+    box-sizing: border-box; /* Ensure padding and border are included in the button's width and height */
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Add a transition effect */
+    font-family: 'Lora', serif; /* Apply Lora font */
+    font-size: 16px; /* Adjust font size */
+    text-decoration: none; /* Remove underline */
 }
 
-
-
+.skills-grid button:hover {
+    background-color: #e0e0e0; /* Add a hover effect */
+    border-color: #bbb; /* Change border color on hover */
+    text-decoration: none; /* Remove underline on hover */
+}
+.skill-description {
+    display: none; /* Initially hidden */
+    margin-top: 20px;
+    padding: 20px; /* Adjust padding */
+    border-radius: 4px; /* Keep the border radius for a smoother look */
+    background-color: #fff;
+    color: #333;
+    font-family: 'Lora', serif; /* Apply Lora font */
+    font-size: 16px; /* Adjust font size */
+    line-height: 1.6; /* Adjust line height for better readability */
+    max-width: 600px; /* Limit the maximum width */
+    margin-left: auto;
+    margin-right: auto; /* Center the description */
+}
 /* Footer */
 footer {
     text-align: center;
@@ -109,15 +167,15 @@ footer {
 
 @keyframes gradientColor {
     0%, 100% {
-        color: #000000; /* Black */
+        color: #000000; 
     }
     50% {
-        color: #E97636; /* Orange */
+        color: #E97636; 
     }
 }
 
 .animated-gradient {
-    animation: gradientColor linear 7s infinite; 
+    animation: gradientColor linear 5s infinite; 
 }
 
 .hidden {
@@ -135,3 +193,59 @@ button:hover {
     text-decoration: underline;
     cursor: pointer;
 }
+
+button.skill-button {
+
+background: none;
+padding: 0;
+
+
+  font-family: 'Lora', serif;}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+     overflow-x: auto; 
+}
+
+.tab {
+    margin: 0 10px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f4f4f9; /* Background color for tabs */
+    border-radius: 5px;
+}
+
+/* Active tab style */
+.tab.active {
+    background-color: #2a7ae2; /* Active tab background color */
+    color: #fff; /* Active tab text color */
+}
+
+/* Hide all tab content by default */
+.tab-content {
+    position: absolute;
+
+    left: 0; /* Align tab content to the left */
+    right: 0; /* Align tab content to the right */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease;
+}
+
+/* Show active tab content */
+.tab-content.active {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+@media screen and (max-width: 600px) {
+    .tab {
+        font-size: 14px; /* Decrease font size */
+        padding: 5px; /* Decrease padding */
+    }
+}
+
