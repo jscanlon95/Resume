@@ -18,7 +18,8 @@ header, section, footer {
 
 p.about {
 
-text-align: center;
+text-align: left;
+margin-left: 5
 font-size: 1.2em;
 
 
@@ -245,6 +246,13 @@ padding: 0;
     .tab {
         font-size: 14px; /* Decrease font size */
         padding: 5px; /* Decrease padding */
+                margin: 5px 0; /* Add margin between tabs */
+
+    }
+     .tabs {
+        flex-direction: column; /* Stack tabs vertically */
+        align-items: center; /* Center tabs horizontally */
     }
 }
+
 
