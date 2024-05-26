@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Joseph Scanlon's Resume</title>
     <link rel="stylesheet" href="styles.css">
      <script defer src="scripts.js"></script>
 </head>
 <body>
+ <div class="container">
     <header>
         <h1>Joseph Scanlon</h1>
        
@@ -17,6 +18,7 @@
             <p><a href="https://www.linkedin.com/in/joseph-scanlon-102237139/">LinkedIn</a></p>
         </div>
     </header>
+    
 <nav class="tabs">
     <h2 class="tab" data-tab-target="#professional-experience">Professional Experience</h2>
     <h2 class="tab" data-tab-target="#education">Education</h2>
@@ -24,6 +26,7 @@
     <h2 class="tab" data-tab-target="#skills">Skills & Knowledge</h2>
     <h2 class="tab" data-tab-target="#freelance-work">Freelance Work</h2>
 </nav>
+
     <section id="professional-experience" class="tab-content">
       
         
@@ -106,14 +109,6 @@
     </article>
 
 
-    <!-- Modal container -->
-    <div id="skill-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p id="skill-description-content"></p>
-        </div>
-    </div>
-
 
 
 </section>
@@ -141,6 +136,8 @@
 
 
 
+
+
     <section id="freelance-work" class="tab-content">
        
         <ul>
@@ -150,7 +147,15 @@
             <li>Creative consultant and production assistant for popular online short film <a href="https://youtu.be/tRL5L3V9X0g?si=OaaGGm0_mRALMTyJ"><i>The Hatchling</i></a></li>
         </ul>
     </section>
-
+    
+    <div id="skill-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="skill-description-content"></p>
+            </div>
+        </div>
+    
+</div>
  
 </body>
 </html>

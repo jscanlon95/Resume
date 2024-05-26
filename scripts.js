@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const content = this.parentElement.nextElementSibling;
             content.classList.toggle("hidden");
             this.textContent = content.classList.contains("hidden") ? "Expand" : "Collapse";
+            adjustBodyHeight();
         });
     });
 
@@ -38,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (!isActive) {
                 tab.classList.add('active');
                 target.classList.add('active');
+                adjustBodyHeight();
             }
         });
     });
@@ -46,11 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll('.skill-button').forEach(button => {
         button.addEventListener('click', () => {
             const description = button.dataset.description;
-            const descriptionContainer = document.getElementById('skill-description');
-            descriptionContainer.textContent = description;
-
-            // Ensure the description is visible and has any necessary styling
-            descriptionContainer.style.display = 'block';
+            openModal(description); // Opening modal when a skill button is clicked
         });
     });
 
@@ -59,7 +57,58 @@ document.addEventListener("DOMContentLoaded", function() {
     const aboutContent = document.querySelector('#about');
     aboutTab.classList.add('active');
     aboutContent.classList.add('active');
+    adjustBodyHeight();
 });
+
+// Get the modal
+var modal = document.getElementById('skill-modal');
+
+// Get the <span> element that closes the modal
+var closeBtn = document.getElementsByClassName('close')[0];
+
+// Function to open the modal with the corresponding skill description
+function openModal(description) {
+    const descriptionContainer = document.getElementById('skill-description-content');
+    descriptionContainer.textContent = description;
+    modal.style.display = 'block'; // Display the modal
+    modal.classList.add('fade-in'); // Add fade-in class to the modal
+}
+
+// Function to close the modal
+function closeModal() {
+    modal.style.display = 'none';
+    modal.classList.remove('fade-in'); // Remove fade-in class when closing modal
+}
+
+// Close the modal when the user clicks on the close button
+closeBtn.onclick = function() {
+    closeModal();
+}
+
+// Close the modal when the user clicks anywhere outside of it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        closeModal();
+    }
+}
+
+// Function to adjust body height based on content
+function adjustBodyHeight() {
+    const tabContents = document.querySelectorAll('.tab-content');
+    let maxContentHeight = 0;
+    tabContents.forEach(tabContent => {
+        if (tabContent.offsetHeight > maxContentHeight) {
+            maxContentHeight = tabContent.offsetHeight;
+        }
+    });
+    document.body.style.minHeight = maxContentHeight + 'px';
+}
+
+// Add an event listener for beforeunload to reset the scroll position
+window.onbeforeunload = function() {
+    window.scrollTo(0, 0);
+}
+
 
 
 /*document.addEventListener("DOMContentLoaded", function() {

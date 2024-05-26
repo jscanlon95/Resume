@@ -1,10 +1,30 @@
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+
+
 body {
+    background-color: #f4f7f9;
+      margin: 0;
+    color: #333;
+       padding: 0;
+        width: 100%;
+       min-height: 100%;
+
     font-family: 'Georgia', serif;
     line-height: 1.6;
-    margin: 20px;
-    padding: 0;
-    background-color: #f4f7f9;
-    color: #333;
+        box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Add padding for spacing */
+    min-height: 100%;
 }
 
 header, section, footer {
@@ -15,7 +35,6 @@ header, section, footer {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 p.about {
 
 text-align: left;
@@ -269,6 +288,7 @@ padding: 0;
     
 }
 
+
 /* Modal styles */
 .modal {
   display: none; /* Initially hidden */
@@ -278,8 +298,17 @@ padding: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0); /* Semi-transparent background */
   overflow: auto; /* Enable scrolling if content exceeds viewport */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 3s ease; /* Apply transition effect */
+}
+
+/* Fade-in effect class */
+.modal.fade-in {
+  opacity: 1; /* Opacity set to 1 to trigger fade-in effect */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+
 }
 
 /* Modal content styles */
@@ -292,6 +321,10 @@ padding: 0;
   max-width: 80%; /* Limit the width of the modal */
 }
 
+
+#skill-description-content {
+    text-align: center;
+}
 /* Close button styles */
 .close {
   color: #aaa;
